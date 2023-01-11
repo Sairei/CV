@@ -9,18 +9,18 @@ type HeaderProps = {
 
 const Head = ({ opened, setOpened }: HeaderProps) => {
   return (
-    <Header height={{ base: 50, md: 70 }} p="md">
-      <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-        <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+    <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+      <Header height={{ base: 50, md: 70 }} p="md">
+        <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
           <Burger
             opened={opened}
             onClick={() => setOpened((o) => !o)}
             size="sm"
             mr="xl"
           />
-        </MediaQuery>
-      </div>
-    </Header>
+        </div>
+      </Header>
+    </MediaQuery>
   );
 };
 

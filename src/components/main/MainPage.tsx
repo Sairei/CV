@@ -9,19 +9,19 @@ import Head from '../header/Head';
 const MainPage = () => {
   const [opened, setOpened] = useState(false);
   return (
-    <div className='main_container'>
-      <AppShell
-        fixed
-        classNames={{
-          main: "main_body"
-        }}
-        header={<Head opened={opened} setOpened={setOpened} />}
-        navbar={<Navigation opened={opened} />} >
+    <AppShell
+      fixed layout='alt'
+      navbarOffsetBreakpoint="sm"
+      asideOffsetBreakpoint="sm"
+      classNames={{
+        main: "main_body"
+      }}
+      header={<Head opened={opened} setOpened={setOpened} />}
+      navbar={<Navigation opened={opened} setOpened={setOpened} />} >
 
-        <Outlet />
+      <Outlet />
 
-      </AppShell>
-    </div>
+    </AppShell>
   );
 };
 
