@@ -7,6 +7,7 @@ import { faGithub, faGitlab, faLinkedinIn, faTwitter } from '@fortawesome/free-b
 const NavReseaux = () => {
   return (
     <Box
+      className="network"
       sx={(theme) => ({
         borderTop: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]}`
       })}
